@@ -49,14 +49,14 @@ let questions = [
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
-startGame = () => {
+let startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
 }
 
-getNewQuestion = () => {
+let getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
